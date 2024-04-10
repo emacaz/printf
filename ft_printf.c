@@ -16,3 +16,10 @@ int	ft_printf(char const *format, ...)
 {
 	return (0);
 }
+
+int	main(void)
+{
+	char c = "ab";
+	printf("%c", c);
+	return 0;
+}

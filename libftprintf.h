@@ -12,6 +12,7 @@
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
+#include <stdio.h>
 
 int	ft_printf(char const *format, ...);
 #endif
