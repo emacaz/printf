@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: emcastil <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/11 17:30:55 by emcastil          #+#    #+#              #
-#    Updated: 2024/03/11 17:30:58 by emcastil         ###   ########.fr        #
+#    Created: 2024/04/10 16:36:30 by emcastil          #+#    #+#              #
+#    Updated: 2024/04/10 16:36:33 by emcastil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,41 +14,26 @@ LIB = ar rcs
 CC = gcc
 CCFLAGS = -Wall -Wextra -Werror
 
-NAME = libft.a
-SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
-ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c ft_memcmp.c \
-ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c \
-ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c \
-ft_strnstr.c ft_strrchr.c ft_substr.c ft_tolower.c \
-ft_toupper.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
-ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
-ft_putnbr_fd.c
-
-BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c\
-ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c\
-	ft_lstmap_bonus.c
+NAME = libftprintf.a
+SRC = main.c
 
 OBJS = $(SRC:.c=.o)
-BONUS_OBJECTS = ${BONUS:.c=.o}
 
-INCLUDE = libft.h
+INCLUDE = libftprintf.h
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(LIB) $@ $^
 
-bonus: ${BONUS_OBJECTS} $(INCLUDE)
-				@ar -rsc $(NAME) $^
-
 %.o: %.c $(INCLUDE)
 	$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) ${BONUS_OBJECTS}
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME) ${BONUS_OBJECTS}
+	rm -f $(NAME)
 
 re: fclean all
 
