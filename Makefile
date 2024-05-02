@@ -12,21 +12,26 @@
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-SRC = ft_printf.c
-OBJ = $(SRC:.c=.o)
+INCLUDES = -Iincludes
+SRC_DIR = srcs
+SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
+OBJ_FILES = $(SRC_FILES:.c=.o)
 NAME = libftprintf.a
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+$(NAME): $(OBJ_FILES)
+	ar rcs $@ $^
+
+%.o: %.c
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ_FILES)
 
 fclean:
 	rm -f $(OBJ) $(NAME)
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: all clean fclean re
