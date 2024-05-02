@@ -6,13 +6,13 @@
 #    By: emcastil <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/02 11:22:56 by emcastil          #+#    #+#              #
-#    Updated: 2024/05/02 11:33:04 by emcastil         ###   ########.fr        #
+#    Updated: 2024/05/02 12:21:01 by emcastil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-SRC = main.c
+SRC = ft_printf.c
 OBJ = $(SRC:.c=.o)
 NAME = libftprintf.a
 

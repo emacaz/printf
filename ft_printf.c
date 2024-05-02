@@ -5,21 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: emcastil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 16:39:55 by emcastil          #+#    #+#             */
-/*   Updated: 2024/04/10 16:39:58 by emcastil         ###   ########.fr       */
+/*   Created: 2024/05/02 11:34:29 by emcastil          #+#    #+#             */
+/*   Updated: 2024/05/02 12:28:40 by emcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(char const *format, ...)
 {
-	return (0);
+	va_list	args;
+	int		count;
+
+	va_start(args, format);
+	count = vprintf(format, args);
+	va_end(args);
+	return (count);
 }
 
 int	main(void)
 {
-	char c = "ab";
-	printf("%c", c);
-	return 0;
+	ft_printf("Hola, $s!\n", "mundo");
+	return (0);
 }
