@@ -30,7 +30,7 @@ clean:
 	rm -f $(OBJ_FILES)
 
 fclean:
-	rm -f $(OBJ) $(NAME)
+	rm -f $(OBJ_FILES) $(NAME)
 
 re: fclean all
 
