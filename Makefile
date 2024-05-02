@@ -5,36 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: emcastil <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/10 16:36:30 by emcastil          #+#    #+#              #
-#    Updated: 2024/04/10 16:36:33 by emcastil         ###   ########.fr        #
+#    Created: 2024/05/02 11:22:56 by emcastil          #+#    #+#              #
+#    Updated: 2024/05/02 11:33:04 by emcastil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIB = ar rcs
 CC = gcc
-CCFLAGS = -Wall -Wextra -Werror
-
-NAME = libftprintf.a
+CFLAGS = -Wall -Werror -Wextra
 SRC = main.c
-
-OBJS = $(SRC:.c=.o)
-
-INCLUDE = libftprintf.h
+OBJ = $(SRC:.c=.o)
+NAME = libftprintf.a
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(LIB) $@ $^
-
-%.o: %.c $(INCLUDE)
-	$(CC) $(CCFLAGS) -c $< -o $@
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:
+	rm -f $(OBJ)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: clean
