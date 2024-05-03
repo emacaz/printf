@@ -18,7 +18,10 @@ SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 OBJ_FILES = $(SRC_FILES:.c=.o)
 NAME = libftprintf.a
 
-all: $(NAME)
+all: sub_makefile $(NAME)
+
+sub_makefile:
+	@$(MAKE) -C libft
 
 $(NAME): $(OBJ_FILES)
 	ar rcs $@ $^
@@ -28,10 +31,12 @@ $(NAME): $(OBJ_FILES)
 
 clean:
 	rm -f $(OBJ_FILES)
+	@$(MAKE) -C libft clean
 
 fclean:
 	rm -f $(OBJ_FILES) $(NAME)
+	@$(MAKE) -C libft fclean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re sub_makefile
