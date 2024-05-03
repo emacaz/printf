@@ -12,27 +12,18 @@
 
 #include "../includes/ft_printf.h"
 
-void	ft_putchar(char c, int fd)
+void	invalid_format(void)
 {
-	write(fd, &c, 1);
-}
-
-void	ft_putstr(char *s, int fd)
-{
-	size_t	i;
-
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	write(1, "Invalid Format\n", 15);
+	return ;
 }
 
 int	ft_printf(char const *format, ...)
 {
+	/*
+		Recorrer todo lo que venga en el string y hacer los cálculos...
+		- La cantidad de formatos deben coincidir con la cantidad de elementos
+	*/
 	va_list	args;
 	int		count;
 
@@ -50,18 +41,13 @@ int	ft_printf(char const *format, ...)
 			ft_putstr(va_arg(args, char *), 1);
 			count++;
 		}
+		if (*format == 'p')
+		{
+			// %p El puntero void * dado como argumento se imprime en formato hexadecimal.
+			write(1, "Implementar formato p\n", 22);
+		}
 		format++;
 	}
 	va_end(args);
 	return (count);
-}
-
-int	main(void)
-{
-	char	letra = 'y';
-	char	*word = "hello";
-
-	ft_printf("%c", letra);
-	ft_printf("%s", word);
-	return (0);
 }

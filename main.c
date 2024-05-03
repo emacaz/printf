@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emcastil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 12:14:53 by emcastil          #+#    #+#             */
-/*   Updated: 2024/05/02 13:22:05 by emcastil         ###   ########.fr       */
+/*   Created: 2024/05/02 22:22:11 by emcastil          #+#    #+#             */
+/*   Updated: 2024/05/02 22:22:13 by emcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "includes/ft_printf.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
+int	main(void)
+{
+	char	letra = 'y';
+	char	*word = "hello, cómo estás...";
+    void    *ptr = "address";
 
-int		ft_printf(char const *format, ...);
-void	ft_putchar(char c, int fd);
-void	ft_putstr(char *s, int fd);
-
-#endif
+	ft_printf("%c", letra);
+    write(1, "\n", 1);
+	ft_printf("%s", word);
+    write(1, "\n", 1);
+	ft_printf("%p", word);
+    write(1, "\n", 1);
+	return (0);
+}
+//  cc main.c srcs/*.c 

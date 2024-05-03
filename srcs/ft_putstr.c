@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emcastil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 12:14:53 by emcastil          #+#    #+#             */
-/*   Updated: 2024/05/02 13:22:05 by emcastil         ###   ########.fr       */
+/*   Created: 2024/05/02 22:02:22 by emcastil          #+#    #+#             */
+/*   Updated: 2024/05/02 22:04:09 by emcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "../includes/ft_printf.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
+void	ft_putstr(char *s, int fd)
+{
+	size_t	i;
 
-int		ft_printf(char const *format, ...);
-void	ft_putchar(char c, int fd);
-void	ft_putstr(char *s, int fd);
-
-#endif
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+}

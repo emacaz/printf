@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emcastil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 12:14:53 by emcastil          #+#    #+#             */
-/*   Updated: 2024/05/02 13:22:05 by emcastil         ###   ########.fr       */
+/*   Created: 2024/05/02 21:58:53 by emcastil          #+#    #+#             */
+/*   Updated: 2024/05/02 21:59:52 by emcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "../includes/ft_printf.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
-
-int		ft_printf(char const *format, ...);
-void	ft_putchar(char c, int fd);
-void	ft_putstr(char *s, int fd);
-
-#endif
+void	ft_putchar(char c, int fd)
+{
+	write(fd, &c, 1);
+}
