@@ -1,6 +1,8 @@
-// int	ft_printf(char const *, ...);
-/*
-* Conversiones:
+/* int	ft_printf(char const *, ...);
+
+
+
+* CONVERSIONES:
 %c, %s, %p, %d, %i, %u, %x, %X, %%
 (-): Efectos dependiendo de la conversión.
 %s (cadena de caracteres): Justifica la cadena de caracteres a la izquierda dentro de un campo de ancho mínimo especificado. Por ejemplo, %-10s justificará la cadena a la izquierda en un campo de 10 caracteres.
@@ -21,5 +23,19 @@ printf "%05000" 123 -> imprimirá 4997 ceros y los 3 dígitos de 123
 
 (+): Flag '+' imprime el valor del signo. Aplicaría únicamente para el positivo ya que el negativo sin la flag igual lo imprime. Si hay más combinaciones de signos seguidos, sólo toma en cuenta si hay un '+'
 
+LÓGICA:
+* practice.c:22:24: warning: more '%' conversions than data arguments [-Wformat-insufficient-args]
+    printf("Error: %c %s\n", ch); // Falta un argumento para %s
 
+* practice.c:23:39: warning: data argument not used by format string [-Wformat-extra-args]
+    printf("Error: %c %s\n", ch, str, num); // Demasiados argumentos para %s
+
+* practice.c:29:22: warning: invalid conversion specifier '\x0a' [-Wformat-invalid-specifier]
+    printf("Error: %z\n", num); // Especificador de formato no válido
+
+practice.c:31:30: warning: format specifies type 'char *' but the argument has type 'char' [-Wformat]
+    printf("Error: %s %c\n", ch, str); // Argumentos en el orden incorrecto
+
+practice.c:31:34: warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+    printf("Error: %s %c\n", ch, str); // Argumentos en el orden incorrecto
 */
