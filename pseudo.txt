@@ -65,5 +65,6 @@ practice.c:31:34: warning: format specifies type 'int' but the argument has type
 1. Get whole format ""
 2. Get variables or data directly
 
+3. Make sure passes all the warnings:
 
 */

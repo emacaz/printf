@@ -18,32 +18,15 @@ void	invalid_format(void)
 	return ;
 }
 
+/*
+* Se declara un objeto de tipo va_list, comúnmente llamado args,
+* que se utilizará para acceder a ...
+
+* va_start se utiliza para inicializar este objeto va_list,
+* de modo que apunte al primer argumento después de *format,
+* que es el primer parámetro fijo de la función 
+*/
 int	ft_printf(char const *format, ...)
 {
 	va_list	args;
-	int		count;
-
-	count = 0;
-	va_start(args, format);
-	while (*format)
-	{
-		if (*format == 'c')
-		{
-			ft_putchar(va_arg(args, int), 1);
-			count++;
-		}
-		if (*format == 's')
-		{
-			ft_putstr(va_arg(args, char *), 1);
-			count++;
-		}
-		if (*format == 'p')
-		{
-			// %p El puntero void * dado como argumento se imprime en formato hexadecimal.
-			write(1, "Implementar formato p\n", 22);
-		}
-		format++;
-	}
-	va_end(args);
-	return (count);
 }

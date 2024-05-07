@@ -14,16 +14,18 @@
 
 int	main(void)
 {
-	char	letra = 'y';
-	char	*word = "hello, cómo estás...";
-    void    *ptr = "address";
+	char	letra;
+	char	*word;
+	void	*ptr;
 
+	letra = 'y';
+	word = "hello, cómo estás...";
+	ptr = "address";
 	ft_printf("%c", letra);
-    write(1, "\n", 1);
+	write(1, "\n", 1);
 	ft_printf("%s", word);
-    write(1, "\n", 1);
+	write(1, "\n", 1);
 	ft_printf("%p", word);
-    write(1, "\n", 1);
+	write(1, "\n", 1);
 	return (0);
 }
-//  cc main.c srcs/*.c 

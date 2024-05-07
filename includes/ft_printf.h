@@ -10,13 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <stdio.h>
 # include <unistd.h>
+
+/*
+* t_total lleva el conteo del número
+* total de caracteres impresos
+*/
+typedef struct s_total
+{
+	int	total;
+}			t_total;
 
 int		ft_printf(char const *format, ...);
 void	ft_putchar(char c, int fd);
