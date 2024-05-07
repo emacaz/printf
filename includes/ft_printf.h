@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emcastil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emcastil <emcastil@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 12:14:53 by emcastil          #+#    #+#             */
-/*   Updated: 2024/05/02 13:22:05 by emcastil         ###   ########.fr       */
+/*   Created: 2024/05/07 13:46:22 by emcastil          #+#    #+#             */
+/*   Updated: 2024/05/07 13:46:24 by emcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H

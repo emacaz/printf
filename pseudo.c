@@ -3,7 +3,26 @@
 
 
 * CONVERSIONES:
-%c, %s, %p, %d, %i, %u, %x, %X, %%
+%c, %s, %p, %d, %i, %u, %x, %X, %%:
+
+• %c Imprime un solo carácter.
+
+• %s Imprime una string (como se define por defecto en C).
+
+• %p El puntero void * dado como argumento se imprime en formato hexadecimal.
+
+• %d Imprime un número decimal (base 10).
+
+• %i Imprime un entero en base 10.
+
+• %u Imprime un número decimal (base 10) sin signo.
+
+• %x Imprime un número hexadecimal (base 16) en minúsculas.
+
+• %X Imprime un número hexadecimal (base 16) en mayúsculas.
+
+• % % para imprimir el símbolo del porcentaje.
+
 (-): Efectos dependiendo de la conversión.
 %s (cadena de caracteres): Justifica la cadena de caracteres a la izquierda dentro de un campo de ancho mínimo especificado. Por ejemplo, %-10s justificará la cadena a la izquierda en un campo de 10 caracteres.
 %d, %i, %u, %x, %X (enteros decimales y hexadecimales): Justifica los números a la izquierda dentro de un campo de ancho mínimo especificado. Por ejemplo, %-5d justificará el número a la izquierda en un campo de 5 caracteres.
@@ -38,4 +57,13 @@ practice.c:31:30: warning: format specifies type 'char *' but the argument has t
 
 practice.c:31:34: warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
     printf("Error: %s %c\n", ch, str); // Argumentos en el orden incorrecto
+*/
+
+/*
+** Application of whole function:
+
+1. Get whole format ""
+2. Get variables or data directly
+
+
 */

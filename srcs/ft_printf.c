@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emcastil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emcastil <emcastil@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 11:34:29 by emcastil          #+#    #+#             */
-/*   Updated: 2024/05/02 13:47:32 by emcastil         ###   ########.fr       */
+/*   Created: 2024/05/07 13:46:55 by emcastil          #+#    #+#             */
+/*   Updated: 2024/05/07 13:47:58 by emcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@ void	invalid_format(void)
 
 int	ft_printf(char const *format, ...)
 {
-	/*
-		Recorrer todo lo que venga en el string y hacer los cálculos...
-		- La cantidad de formatos deben coincidir con la cantidad de elementos
-	*/
 	va_list	args;
 	int		count;
 
