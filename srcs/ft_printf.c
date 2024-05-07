@@ -39,6 +39,7 @@ int	ft_printf(char const *format, ...)
 
 	total.total = 0;
 	va_start(args, format);
+	
 	ft_check_match(format, args);
 	ft_format_handler(format, args, total.total);
 	va_end(args);

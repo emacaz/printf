@@ -38,3 +38,12 @@ void	form_spec_type(int fd)
 {
 	write(fd, "warning: invalid format\n", 24);
 }
+
+/*
+* Print if a format is not a part of the subject
+*/
+void	format_prohibited(int fd)
+{
+	write(fd, "Format not valid. Valid formats:\n", 33);
+	write(fd, "%c, %s, %p, %d, %i, %u, %x, %X, %%\n", 35);
+}

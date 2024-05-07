@@ -12,6 +12,7 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+# define ALL_CONVER_FLAGS "0# +-123456789."
 
 # include <stdarg.h>
 # include <stdio.h>
@@ -38,5 +39,6 @@ void	form_spec_type(int fd);
 
 void	ft_format_handler(char const *format, va_list args, t_total *total);
 void	ft_check_match(char const *format, va_list args);
+int		valid_format_ch(char const *format);
 
 #endif

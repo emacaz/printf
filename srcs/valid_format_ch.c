@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_format_handler.c                                :+:      :+:    :+:   */
+/*   valid_format_ch.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emcastil <emcastil@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 15:24:01 by emcastil          #+#    #+#             */
-/*   Updated: 2024/05/07 15:24:06 by emcastil         ###   ########.fr       */
+/*   Created: 2024/05/07 23:16:12 by emcastil          #+#    #+#             */
+/*   Updated: 2024/05/07 23:16:14 by emcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
 /*
-* Maneja las conversiones de formato y las flags
-* en la cadena de formato
+* Check if the the given string matches
+* conversions and flags:
+* %c, %s, %p, %d, %i, %u, %x, %X, %%
+* (-), (0), (.), (#), (espacio), (+)
 */
-
-void	ft_format_handler(char const *format, va_list args, t_total *total)
+int	valid_format_ch(char const *format)
 {
-	return ;
+	int	i;
+
+	i = 0;
+	while (ALL_CONVER_FLAGS[i])
+	{
+		if (ALL_CONVER_FLAGS[i] == format)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (-1);
 }
