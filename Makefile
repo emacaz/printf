@@ -14,7 +14,8 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 INCLUDES = -Iincludes
 SRC_DIR = srcs
-SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
+CONVERSIONS_DIR = conversions
+SRC_FILES = $(wildcard $(SRC_DIR)/*.c $(CONVERSIONS_DIR)/*.c)
 OBJ_FILES = $(SRC_FILES:.c=.o)
 NAME = libftprintf.a
 
