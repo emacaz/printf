@@ -36,4 +36,7 @@ void	data_not_used(int fd);
 void	inva_conv_spec(int fd);
 void	form_spec_type(int fd);
 
+void	ft_format_handler(char const *format, va_list args, t_total *total);
+void	ft_check_match(char const *format, va_list args);
+
 #endif
