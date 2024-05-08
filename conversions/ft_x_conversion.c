@@ -14,7 +14,7 @@
 
 void	ft_printf_x_basic(t_flags flags, t_char data, t_total *total)
 {
-	int	i,
+	int	i;
 
 	i = 0;
 	if (flags.dot == 1 && data.lui == 0)

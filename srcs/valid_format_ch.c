@@ -23,9 +23,9 @@ int	valid_format_ch(char const *format)
 	int	i;
 
 	i = 0;
-	while (ALL_CONVER_FLAGS[i])
+	while (ALL_FLAGS[i])
 	{
-		if (ALL_CONVER_FLAGS[i] == format)
+		if (ALL_FLAGS[i] == format)
 		{
 			return (0);
 		}

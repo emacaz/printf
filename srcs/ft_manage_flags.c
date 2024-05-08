@@ -81,7 +81,7 @@ void	start_flags_struct(char *str, va_list args, t_total *total)
 	manage_flag(args, flags, total);
 }
 
-void	ft_manage_flags(char const *f, int l, va_list arg, t_total *total)
+void	ft_manage_flags(int l, va_list arg, t_total *total)
 {
 	t_char	this;
 
