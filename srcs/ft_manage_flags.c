@@ -43,7 +43,7 @@ void	manage_flag(va_list args, t_flags flags, t_total total)
 			flags.dot = 1;
 			if (ft_isdigit(*(flags.substr + 1)) == 1)
 			{
-				
+				return ;
 			}
 		}
 	}
@@ -66,6 +66,7 @@ void	start_flags_struct(char *string, va_list args, t_total total)
 	flags.dot_num = 0;
 	manage_flag(args, flags, total);
 }
+
 
 void	ft_manage_flags(char const *f, int l, va_list arg, t_total *tot)
 {

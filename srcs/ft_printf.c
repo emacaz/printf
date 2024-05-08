@@ -36,6 +36,7 @@ int	ft_printf(char const *format, ...)
 {
 	va_list	args;
 	t_total	total;
+
 	total.total = 0;
 	va_start(args, format);
 	ft_format_handler(format, args, &total);
