@@ -77,5 +77,7 @@ void	ft_manage_flags(char const *f, int l, va_list arg, t_total *tot);
 void	ft_putchar_fd_char(char c, int fd, t_total *total);
 void	ft_manage_flags(char const *f, int l, va_list arg, t_total *tot);
 void	ft_print_admin(t_flags flags, va_list args, t_total *total);
+void	ft_c_conversion(t_flags flags, va_list args, t_total *total);
+void	ft_s_conversion(t_flags flags, va_list args, t_total *total);
 
 #endif

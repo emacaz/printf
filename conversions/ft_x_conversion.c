@@ -11,3 +11,11 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+void	ft_x_conversion(t_flags flags, va_list args, t_total *total)
+{
+	t_char	data;
+
+	data.lui = va_arg(args, unsigned long int);
+	// flags.str = ft_itoa
+}
