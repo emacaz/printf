@@ -12,19 +12,28 @@
 
 #include "../includes/ft_printf.h"
 
-/* warning: more '%' conversions than data arguments */
+/*
+* warning: more '%' conversions than data arguments
+* It has more formats than arguments
+*/
 void	more_conv_th_d(int fd)
 {
 	write(fd, "warning: more '%' conversions than data arguments\n", 50);
 }
 
-/* warning: data argument not used by format string */
+/*
+* warning: data argument not used by format string
+* More arguments than formats
+*/
 void	data_not_used(int fd)
 {
 	write(fd, "warning: data argument not used by format string\n", 49);
 }
 
-/* warning: invalid conversion specifier */
+/*
+ * warning: invalid conversion specifier
+ * Argument type does not match the format
+ */
 void	inva_conv_spec(int fd)
 {
 	write(fd, "warning: invalid conversion specifier\n", 38);

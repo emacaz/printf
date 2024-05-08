@@ -15,10 +15,10 @@
 /*
 * Verifica la coherencia entre los argumentos y el formato
 */
-void	ft_check_match(char const *format, va_list args)
-{
-	while (*format != '\0')
-	{
-		if (*format == '%')
-	}
-}
+	// void	ft_check_match(char const *format, va_list args)
+	// {
+	// 	while (*format != '\0')
+	// 	{
+	// 		if (*format == '%')
+	// 	}
+	// }
