@@ -79,5 +79,7 @@ void	ft_manage_flags(char const *f, int l, va_list arg, t_total *tot);
 void	ft_print_admin(t_flags flags, va_list args, t_total *total);
 void	ft_c_conversion(t_flags flags, va_list args, t_total *total);
 void	ft_s_conversion(t_flags flags, va_list args, t_total *total);
+void	ft_flags_logic(t_flags *flags);
+void	ft_num_in_flags(t_flags *flags);
 
 #endif

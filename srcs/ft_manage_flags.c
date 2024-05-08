@@ -59,7 +59,7 @@ void	manage_flag(va_list args, t_flags flags, t_total *total)
 		flags.substr++;
 	}
 	flags.param = *flags.substr;
-	ft_hub(flags, args, total);
+	ft_print_admin(flags, args, total);
 }
 
 /*
