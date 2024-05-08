@@ -34,30 +34,43 @@ int	check_chars(char c)
 /*
 *
 */
-void	manage_flag(va_list args, t_flags flags, t_total total)
+void	manage_flag(va_list args, t_flags flags, t_total *total)
 {
-	while (check_chars(*flags.substr) != 0)
+	while (ft_what_char(*flags.substr) != 0)
 	{
 		if (*flags.substr == '.')
 		{
 			flags.dot = 1;
 			if (ft_isdigit(*(flags.substr + 1)) == 1)
 			{
-				return ;
+				ft_numbers_in_flags(&flags);
+				while (ft_isdigit(*(flags.substr + 1)) == 1)
+					flags.substr++;
 			}
 		}
+		else if (ft_isdigit(*flags.substr) == 1 && *flags.substr != '0')
+		{
+			ft_numbers_in_flags(&flags);
+			while (ft_isdigit(*(flags.substr + 1)) == 1)
+				flags.substr++;
+		}
+		else
+			ft_flags_conditions(&flags);
+		flags.substr++;
 	}
+	flags.param = *flags.substr;
+	ft_hub(flags, args, total);
 }
 
 /*
 * start_flags_struct inicia la struct
 * para guardar los valores de las flags
 */
-void	start_flags_struct(char *string, va_list args, t_total total)
+void	start_flags_struct(char *str, va_list args, t_total *total)
 {
 	t_flags	flags;
 
-	flags.substr = string;
+	flags.substr = str;
 	flags.dot = 0;
 	flags.number = 0;
 	flags.minus = 0;
@@ -67,8 +80,7 @@ void	start_flags_struct(char *string, va_list args, t_total total)
 	manage_flag(args, flags, total);
 }
 
-
-void	ft_manage_flags(char const *f, int l, va_list arg, t_total *tot)
+void	ft_manage_flags(char const *f, int l, va_list arg, t_total *total)
 {
 	t_char	this;
 
@@ -82,7 +94,8 @@ void	ft_manage_flags(char const *f, int l, va_list arg, t_total *tot)
 	while (this.i <= l)
 	{
 		this.str[this.i] = '\0';
-		start_flags_struct(this.str, arg, tot);
+		this.i++;
 	}
+	start_flags_struct(this.str, arg, total);
 	free(this.str);
 }
