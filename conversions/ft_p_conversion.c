@@ -24,6 +24,7 @@ void	ft_printf_p(t_flags flags, t_total *total)
 	}
 }
 
+/* putstr with a given file descriptor */
 void	ft_putstr_fd_p(char *str, int fd, size_t len, t_total *total)
 {
 	size_t	i;

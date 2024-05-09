@@ -26,9 +26,9 @@ void	ft_print_admin(t_flags flags, va_list args, t_total *total)
 	else if (flags.param == 'x' || flags.param == 'X')
 		ft_x_conversion(flags, args, total); // done
 	else if (flags.param == 'u')
-		ft_u_conversion(flags, args, total);
+		ft_u_conversion(flags, args, total); // done
 	else if (flags.param == 'p')
-		ft_p_conversion(flags, args, total);
+		ft_p_conversion(flags, args, total); // done
 	else if (flags.param == 'd' || flags.param == 'i')
-		ft_di_conversion(flags, args, total);
+		ft_di_conversion(flags, args, total); // done
 }
