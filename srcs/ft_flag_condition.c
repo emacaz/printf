@@ -34,7 +34,7 @@ void	ft_flags_logic(t_flags *flags)
 	else if (*(flags->substr) == '+')
 		flags->plus_space = 1;
 	else if (*(flags->substr) == '#')
-		flags->plus_space = 1;
+		flags->sharp = 1;
 }
 
 void	ft_num_in_flags(t_flags *flags)

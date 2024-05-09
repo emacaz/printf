@@ -73,7 +73,7 @@ void	form_spec_type(int fd);
 
 void	ft_format_handler(char const *format, va_list args, t_total *total);
 int		valid_format_ch(char const *format);
-void	ft_manage_flags(int l, va_list arg, t_total *tot);
+void	ft_manage_flags(int len, va_list args, t_total *total);
 void	ft_putchar_fd_char(char c, int fd, t_total *total);
 void	ft_print_admin(t_flags flags, va_list args, t_total *total);
 void	ft_c_conversion(t_flags flags, va_list args, t_total *total);

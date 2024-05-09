@@ -13,18 +13,18 @@
 #include "../includes/ft_printf.h"
 
 /*
-* enrutar y gestionar el formato y los
+* Enruta y gestiona el formato y los
 * argumentos correspondientes a la función
 * de impresión adecuada según el tipo de conversión
 */
 void	ft_print_admin(t_flags flags, va_list args, t_total *total)
 {
 	if (flags.param == 'c' || flags.param == '%')
-		ft_c_conversion(flags, args, total);
+		ft_c_conversion(flags, args, total); // done
 	else if (flags.param == 's')
-		ft_s_conversion(flags, args, total);
+		ft_s_conversion(flags, args, total); // done
 	else if (flags.param == 'x' || flags.param == 'X')
-		ft_x_conversion(flags, args, total);
+		ft_x_conversion(flags, args, total); // done
 	else if (flags.param == 'u')
 		ft_u_conversion(flags, args, total);
 	else if (flags.param == 'p')

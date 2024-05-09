@@ -32,7 +32,7 @@ int	check_chars(char c)
 }
 
 /*
-*
+* assigns values to struct i according to flags
 */
 void	manage_flag(va_list args, t_flags flags, t_total *total)
 {

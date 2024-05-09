@@ -19,7 +19,7 @@ void	ft_putstr_basic(t_flags flags, t_total *total)
 	ch.i = 0;
 	while (ch.i < (int)ft_strlen(flags.str))
 	{
-		ft_putchar_fd_print(flags.str[ch.i], 1, total);
+		ft_putchar_fd_char(flags.str[ch.i], 1, total);
 		ch.i++;
 	}
 }
