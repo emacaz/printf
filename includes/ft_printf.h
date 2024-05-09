@@ -85,5 +85,8 @@ void	ft_num_in_flags(t_flags *flags);
 void	ft_x_conversion(t_flags flags, va_list args, t_total *total);
 void	ft_u_conversion(t_flags flags, va_list args, t_total *total);
 char	*ft_itoa_printf_p(unsigned long int n, t_char d, t_flags flags);
+char	*ft_itoa_printf_u(unsigned int n);
+char	*ft_itoa_printf_x(unsigned int n, t_char data, t_flags flags);
+char	*ft_itoa_printf(int num);
 
 #endif
