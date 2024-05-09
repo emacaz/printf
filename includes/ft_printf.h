@@ -12,13 +12,14 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# define ALL_FLAGS "0# +-123456789."
-# define ALL_CONVERSIONS "cspdiuxX%"
 
 # include <stdarg.h>
 # include <stdio.h>
 # include <unistd.h>
 # include "../libft/libft.h"
+
+# define ALL_FLAGS "0# +-123456789."
+# define ALL_CONVERSIONS "cspdiuxX%"
 
 /*
 * t_total lleva el conteo del número
@@ -62,17 +63,7 @@ typedef struct s_flags
 }				t_flags;
 
 int		ft_printf(char const *format, ...);
-void	ft_putchar(char c, int fd);
-void	ft_putstr(char *s, int fd);
-
-/* WARNINGS */
-void	more_conv_th_d(int fd);
-void	data_not_used(int fd);
-void	inva_conv_spec(int fd);
-void	form_spec_type(int fd);
-
 void	ft_format_handler(char const *format, va_list args, t_total *total);
-int		valid_format_ch(char format);
 void	ft_manage_flags(int len, va_list args, t_total *total);
 void	ft_putchar_fd_char(char c, int fd, t_total *total);
 void	ft_print_admin(t_flags flags, va_list args, t_total *total);
