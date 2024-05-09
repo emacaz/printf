@@ -69,7 +69,7 @@ void	ft_format_handler(char const *format, va_list args, t_total *total)
 				counter.ct++;
 				format++;
 			}
-			ft_manage_flags((format - counter.ct), (counter.ct), args, total);
+			ft_manage_flags(counter.ct, args, total);
 		}
 		else
 		{

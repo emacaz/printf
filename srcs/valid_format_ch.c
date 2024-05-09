@@ -18,18 +18,18 @@
 * %c, %s, %p, %d, %i, %u, %x, %X, %%
 * (-), (0), (.), (#), (espacio), (+)
 */
-int	valid_format_ch(char const *format)
+int	valid_format_ch(char format)
 {
-	int	i;
+	t_char	j;
 
-	i = 0;
-	while (ALL_FLAGS[i])
+	j.i = 0;
+	while (ALL_FLAGS[j.i])
 	{
-		if (ALL_FLAGS[i] == format)
+		if (ALL_FLAGS[j.i] == format)
 		{
 			return (0);
 		}
-		i++;
+		j.i++;
 	}
 	return (-1);
 }
