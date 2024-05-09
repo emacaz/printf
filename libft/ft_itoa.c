@@ -6,14 +6,14 @@
 /*   By: emcastil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 18:46:55 by emcastil          #+#    #+#             */
-/*   Updated: 2024/03/19 18:49:59 by emcastil         ###   ########.fr       */
+/*   Updated: 2024/05/09 10:49:40 by emcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Calculates 'base' raised to the power of 'exp'
-long int	static	ft_base(long int base, size_t exp, int *value)
+static long int	ft_base(long int base, size_t exp, int *value)
 {
 	long int	number;
 
