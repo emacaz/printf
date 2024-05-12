@@ -34,14 +34,20 @@ CONVERSIONS =	./conversions/ft_c_conversion.c \
 SRC_FILES = $(SRCS) $(CONVERSIONS)
 OBJ_FILES = $(SRC_FILES:.c=.o)
 NAME = libftprintf.a
+LIBFT_DIR = libft/
+LIB = libft.a
 
-all: sub_makefile $(NAME)
+all: sub_makefile $(LIB) $(NAME)
 
 sub_makefile:
-	@$(MAKE) -C libft
+	make -C libft
+	make bonus -C libft
 
 $(NAME): $(OBJ_FILES)
 	ar rcs $@ $^
+
+$(LIB):
+	make $(LIB) -C $(LIBFT_DIR)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
