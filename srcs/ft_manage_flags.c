@@ -15,7 +15,7 @@
 /*
 * Checks if the string matches conversions allowed
 */
-int	check_chars(char c)
+static int	check_chars(char c)
 {
 	t_char	this;
 
@@ -32,7 +32,8 @@ int	check_chars(char c)
 }
 
 /*
-* assigns values to struct i according to flags
+* Asigna valores a la struct i
+* de acuerdo a las flags
 */
 void	manage_flag(va_list args, t_flags flags, t_total *total)
 {

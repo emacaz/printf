@@ -34,7 +34,7 @@ int	check_chars(char c)
 /*
 * Checks if the string matches all flags with numbers
 */
-int	check_flags(char c)
+static int	check_flags(char c)
 {
 	t_char	this;
 

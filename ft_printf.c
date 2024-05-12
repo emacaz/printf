@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "./includes/ft_printf.h"
 
 /*
 ** Función principal ft_printf
