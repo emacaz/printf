@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 INCLUDES = -Iincludes
 SRCS = ft_printf.c \
@@ -47,7 +47,7 @@ $(NAME): $(OBJ_FILES)
 	ar rcs $@ $^
 
 $(LIB):
-	make $(LIB) -C $(LIBFT_DIR)
+	cp libft/libft.a $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@

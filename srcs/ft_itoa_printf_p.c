@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-
+#include <ft_printf.h>
 /* converts an int to its char representation */
 
 static int	ft_count_hex_digits(unsigned int num)

@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-
+#include <ft_printf.h>
 /*
 * Write a char in fd e incrementa
 * la totalidad de chars impresos

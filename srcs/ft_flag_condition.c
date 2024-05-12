@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-
+#include <ft_printf.h>
 /*
 * Examina el carácter actual en la cadena
 * de banderas y establece las condiciones

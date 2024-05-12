@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include <ft_printf.h>
 
 void	ft_printf_x_basic(t_flags flags, t_char data, t_total *total)
 {

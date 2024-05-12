@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-
+#include <ft_printf.h>
 /*
 * Checks if the string matches conversions allowed
 */

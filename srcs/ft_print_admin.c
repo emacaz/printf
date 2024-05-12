@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-
+#include <ft_printf.h>
 /*
 * Enruta y gestiona el formato y los
 * argumentos correspondientes a la función
