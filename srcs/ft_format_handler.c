@@ -13,8 +13,8 @@
 #include <ft_printf.h>
 
 /*
-* Maneja las conversiones de formato y las flags
-* en la cadena de formato buscando '%'
+* Handle conversions and flags looking for '%'
+* (format - counter.ct): adjust position of flags
 */
 void	ft_format_handler(const char *format, va_list args, t_total *total)
 {

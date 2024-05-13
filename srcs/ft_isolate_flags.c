@@ -13,8 +13,7 @@
 #include <ft_printf.h>
 
 /*
-* Asigna valores a la struct i
-* de acuerdo a las flags
+* Assigns values to struct, walking through flags.substr
 */
 void	ft_manage_flag(va_list args, t_flags flags, t_total *total)
 {
@@ -45,8 +44,9 @@ void	ft_manage_flag(va_list args, t_flags flags, t_total *total)
 }
 
 /*
-* start_flags_struct inicia la struct
-* para guardar los valores de las flags
+* start_flags_struct starts t_flags-struct
+* param-> Determines what kind of conversion
+* i.e.: if "%d" param=d
 */
 void	start_flags_struct(char *str, va_list args, t_total *total)
 {
@@ -63,6 +63,11 @@ void	start_flags_struct(char *str, va_list args, t_total *total)
 	ft_manage_flag(args, flags, total);
 }
 
+/*
+* It copies flags to a new string (this.str)
+* so it can be managed through a function
+* (* 2) It allows storage a flag and a null-char
+*/
 void	ft_isolate_flags(const char *f, int l, va_list arg, t_total *total)
 {
 	t_char	this;
