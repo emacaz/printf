@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 INCLUDES = -Iincludes
 SRCS = ft_printf.c \
