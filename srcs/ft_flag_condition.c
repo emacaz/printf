@@ -35,7 +35,10 @@ void	ft_flags_logic(t_flags *flags)
 	else if (*(flags->substr) == '#')
 		flags->sharp = 1;
 }
-
++
+/*
+* Analize flags to determine if it is a number
+*/
 void	ft_num_in_flags(t_flags *flags)
 {
 	if (*(flags->substr) == '.')
