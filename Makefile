@@ -23,6 +23,7 @@ SRCS = ft_printf.c \
 		./srcs/ft_manage_flags.c \
 		./srcs/ft_print_admin.c \
 		./srcs/ft_putchar_fd_char.c \
+		./srcs/ft_check_flags.c \
 
 CONVERSIONS =	./conversions/ft_c_conversion.c \
 				./conversions/ft_di_conversion.c \

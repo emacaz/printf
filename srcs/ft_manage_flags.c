@@ -11,24 +11,6 @@
 /* ************************************************************************** */
 
 #include <ft_printf.h>
-/*
-* Checks if the string matches conversions allowed
-*/
-static int	check_chars(char c)
-{
-	t_char	this;
-
-	this.i = 0;
-	while (ALL_CONVERSIONS[this.i])
-	{
-		if (ALL_CONVERSIONS[this.i] == c)
-		{
-			return (0);
-		}
-		this.i++;
-	}
-	return (-1);
-}
 
 /*
 * Asigna valores a la struct i
@@ -36,7 +18,7 @@ static int	check_chars(char c)
 */
 void	manage_flag(va_list args, t_flags flags, t_total *total)
 {
-	while (check_chars(*flags.substr) != 0)
+	while (ft_check_chars(*flags.substr) != 0)
 	{
 		if (*flags.substr == '.')
 		{

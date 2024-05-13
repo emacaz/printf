@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <limits.h>
 # include "../libft/libft.h"
 
 # define ALL_FLAGS "0# +-123456789."
@@ -79,5 +80,7 @@ char	*ft_itoa_printf_p(unsigned long int n, t_char d, t_flags flags);
 char	*ft_itoa_printf_u(unsigned int n);
 char	*ft_itoa_printf_x(unsigned int n, t_char data, t_flags flags);
 char	*ft_itoa_printf(int num);
+int		ft_check_flags(char c);
+int		ft_check_chars(char c);
 
 #endif

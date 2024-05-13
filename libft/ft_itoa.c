@@ -26,7 +26,7 @@ static long int	ft_base(long int base, size_t exp, int *value)
 	return (number);
 }
 
-// Converts an integer 'n' into a null-terminated string
+// Converts an integer 'n' into a NULL-terminated string
 char	*ft_itoa(int n)
 {
 	int		value;

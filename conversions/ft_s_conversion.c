@@ -30,7 +30,7 @@ void	ft_s_conversion(t_flags flags, va_list args, t_total *total)
 	if (!flags.str)
 	{
 		flags.str = malloc(sizeof(char) * 7);
-		ft_strlcpy(flags.str, "(null)", 7);
+		ft_strlcpy(flags.str, "(NULL)", 7);
 		ft_putstr_basic(flags, total);
 		free(flags.str);
 	}
