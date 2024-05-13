@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isolate_flags.c                                  :+:      :+:    :+:   */
+/*   ft_isolate_flags.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emcastil <emcastil@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,7 +16,7 @@
 * Asigna valores a la struct i
 * de acuerdo a las flags
 */
-void	manage_flag(va_list args, t_flags flags, t_total *total)
+void	ft_manage_flag(va_list args, t_flags flags, t_total *total)
 {
 	while (ft_check_chars(*flags.substr) != 0)
 	{
@@ -60,7 +60,7 @@ void	start_flags_struct(char *str, va_list args, t_total *total)
 	flags.param = 0;
 	flags.sharp = 0;
 	flags.dot_num = 0;
-	manage_flag(args, flags, total);
+	ft_manage_flag(args, flags, total);
 }
 
 void	ft_isolate_flags(const char *f, int l, va_list arg, t_total *total)
