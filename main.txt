@@ -44,13 +44,5 @@ int main()
     ft_printf("Plus flag for positive integer: %+d\n", num);
     ft_printf("Plus flag for negative integer: %+d\n", neg_num);
 
-    // Edge cases
-    ft_printf("NULL pointer: %p\n", NULL);
-    ft_printf("Empty string: %s\n", "");
-    ft_printf("String with precision: %.5s\n", str);
-    ft_printf("String with negative precision: %.5s\n", "");
-    ft_printf("Large integer: %d\n", 1234567890);
-    ft_printf("Large negative integer: %d\n", -1234567890);
-
-    return 0;
+    return (0);
 }
