@@ -20,7 +20,7 @@ SRCS = ft_printf.c \
 		./srcs/ft_itoa_printf_u.c \
 		./srcs/ft_itoa_printf_x.c \
 		./srcs/ft_itoa_printf.c \
-		./srcs/ft_manage_flags.c \
+		./srcs/ft_isolate_flags.c \
 		./srcs/ft_print_admin.c \
 		./srcs/ft_putchar_fd_char.c \
 		./srcs/ft_check_flags.c \

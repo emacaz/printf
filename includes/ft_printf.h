@@ -13,11 +13,11 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include "../libft/libft.h"
 # include <stdarg.h>
 # include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
-# include "../libft/libft.h"
 
 # define ALL_FLAGS "0# +-123456789."
 # define ALL_CONVERSIONS "cspdiuxX%"
@@ -28,7 +28,7 @@
 */
 typedef struct s_total
 {
-	int	total;
+	int	tot;
 }			t_total;
 
 /*
@@ -64,8 +64,10 @@ typedef struct s_flags
 }				t_flags;
 
 int		ft_printf(char const *format, ...);
-void	ft_format_handler(char const *format, va_list args, t_total *total);
-void	ft_manage_flags(int len, va_list args, t_total *total);
+void	ft_format_handler(const char *format, va_list args, t_total *total);
+int		ft_check_flags(char c);
+int		ft_check_chars(char c);
+void	ft_isolate_flags(const char *f, int len, va_list args, t_total *tot);
 void	ft_putchar_fd_char(char c, int fd, t_total *total);
 void	ft_print_admin(t_flags flags, va_list args, t_total *total);
 void	ft_c_conversion(t_flags flags, va_list args, t_total *total);
@@ -80,7 +82,5 @@ char	*ft_itoa_printf_p(unsigned long int n, t_char d, t_flags flags);
 char	*ft_itoa_printf_u(unsigned int n);
 char	*ft_itoa_printf_x(unsigned int n, t_char data, t_flags flags);
 char	*ft_itoa_printf(int num);
-int		ft_check_flags(char c);
-int		ft_check_chars(char c);
 
 #endif

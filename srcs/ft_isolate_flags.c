@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_manage_flags.c                                  :+:      :+:    :+:   */
+/*   ft_isolate_flags.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emcastil <emcastil@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -63,7 +63,7 @@ void	start_flags_struct(char *str, va_list args, t_total *total)
 	manage_flag(args, flags, total);
 }
 
-void	ft_manage_flags(int l, va_list arg, t_total *total)
+void	ft_isolate_flags(const char *f, int l, va_list arg, t_total *total)
 {
 	t_char	this;
 
@@ -76,9 +76,10 @@ void	ft_manage_flags(int l, va_list arg, t_total *total)
 		return ;
 	while (this.i <= l)
 	{
-		this.str[this.i] = '\0';
+		this.str[this.i] = f[this.i];
 		this.i++;
 	}
+	this.str[this.i] = '\0';
 	start_flags_struct(this.str, arg, total);
 	free(this.str);
 }

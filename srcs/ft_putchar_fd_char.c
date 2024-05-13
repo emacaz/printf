@@ -18,5 +18,5 @@
 void	ft_putchar_fd_char(char c, int fd, t_total *total)
 {
 	write(fd, &c, 1);
-	total->total++;
+	total->tot++;
 }
