@@ -26,6 +26,7 @@
 * t_total es una estructura int para almacenar
 * el conteo de caracteres a imprimir
 */
+
 int	ft_printf(char const *format, ...)
 {
 	va_list	args;
